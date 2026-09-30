@@ -1,0 +1,7 @@
+html,body{height:100%;overflow:hidden}
+body.embedded .preview-utility,body.embedded .atlas-after,body.embedded .atlas-mast>a{display:none!important}
+body.embedded .atlas{height:100dvh;width:100%;max-width:none;margin:0;border:0;border-radius:0;display:flex;flex-direction:column}
+body.embedded .atlas-body{flex:1;min-height:0;height:auto;overflow:hidden}
+body.embedded .atlas-rail,body.embedded .atlas-page{max-height:none;min-height:0;height:100%;overflow:auto}
+body.embedded .atlas-footer{flex:none}
+@media(max-width:700px){body.embedded .atlas-body{display:flex;flex-direction:column}body.embedded .atlas-rail{flex:none;height:auto;overflow-x:auto;overflow-y:hidden}body.embedded .atlas-page{flex:1;height:auto;overflow:auto}body.embedded .atlas-mast{flex:none}}

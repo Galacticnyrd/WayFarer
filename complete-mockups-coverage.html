@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wayfarer mockup coverage</title><style>
+*{box-sizing:border-box}body{margin:0;background:#091a26;color:#f3e8ce;font:15px/1.55 system-ui}main{max-width:1120px;margin:auto;padding:30px 22px 70px}h1,h2{font-family:Georgia,serif;font-weight:normal;color:#f2d68f}h1{font-size:40px;margin:8px 0}p{max-width:780px;color:#d7c9ad}a{color:#eaca7b}table{border-collapse:collapse;width:100%;margin-top:24px;background:#102b40}th,td{padding:12px 14px;border-bottom:1px solid #a6752e80;text-align:left;vertical-align:top}th{color:#f2d68f;background:#071929;font-size:12px;letter-spacing:.8px;text-transform:uppercase}td:first-child{font-weight:650;white-space:nowrap}td:last-child{color:#d7c9ad}tr:nth-child(even){background:#123249}.note{border-left:3px solid #d4a553;padding:11px 15px;background:#15364b;margin:23px 0}.back{display:inline-block;margin:12px 0 4px}
+@media(max-width:690px){h1{font-size:29px}table,tbody,tr,td{display:block}thead{display:none}tr{border:1px solid #a6752e;margin:11px 0}td{border:0;padding:6px 12px;white-space:normal!important}td:first-child{padding-top:13px;color:#f2d68f}td:last-child{padding-bottom:13px}}
+</style></head><body><main><a class="back" href="complete-mockups.html">← Return to Tome mockups</a><h1>Feature by feature.</h1><p>This map checks the approved launch areas and chapter contracts against the interactive concept screens. The linked examples use fictional records. A covered mockup is a visual and interaction proposal, not evidence that its feature is implemented or supported by the current Forever client.</p><div class="note"><strong>Five groups, 19 chapters, six shared/system surfaces.</strong> Unknown API facts, photo capture, peer transport, physical controller acceptance and Hardcore eligibility remain conditional in the examples. The site is a guild interest preview; it is not a release claim.</div><table><thead><tr><th>Approved area</th><th>Where to inspect it</th><th>What the mockup covers</th></tr></thead><tbody id="coverage"></tbody></table><p>Source of scope: Wayfarer Launch Hardening, Tome page compositions, UI System, and the specialized Signals, Shared Moments, Tooltips, Bestiary, Discovery, Narration, Memory and compatibility documents in the project repository.</p></main><script>
+const rows=[
+['Forever Tome','index','Cover, Index, five group bookmarks, routes, Back, page versus spread, resume and first opening'],
+['Tome Whispers','whispers','Ten cue categories, one quiet queue, safety and expiry'],
+['Discovery Toasts','discovery','Qualifying first arrival, returns, place types, text and archive'],
+['Narration','discovery','Three tiers, one voice, transcript, replay, collision and account/character choices'],
+['People & Familiar Faces','people','Meaningful people, private note, shared facts, reunion, Promises and Favors'],
+['Chronicle','chronicle','Life eras, selected moments, links, provenance and readable memory detail'],
+['Born Days','born','Witnessed, first remembered or player-recorded beginning and anniversaries'],
+['Scrapbook','scrapbook','Album, eight-layout editor, writing, optional local photo and links'],
+['Fireside','fireside','Five prompts, lore versus memory, private reflection and manual social bridge'],
+['Forever Lore','discovery','Approved place/topic facts, spoiler and source separation'],
+['Landmark Archive','landmarks','Known place index, exactness, useful list fallback and linked histories'],
+['Trailmarks','trailmarks','Mark Here, title, note, type, links and list-first fallback'],
+['Road Ahead','road','Short authored to-do list, direct actions, return cue and record links; try the working list on page three'],
+['Campwright & Camp Reflection','campwright','Here & Now, known utilities, contribution and private reflection'],
+['Rumor','rumor','Following/aside/resolved shelves, four hint stages and spoiler-safe sharing'],
+['Blueprint & Crafting Ledger','blueprint','Selected craft, known recipe context, Have/Need/Missing and shared draft'],
+['Legacy Loom & Journey Seeds','loom','History-grounded ideas, pin/dismiss and memory-only fallback'],
+['Crossroads & Traveler Card','crossroads','Private versus promoted road, Need/Offer/Intent/Capability, opportunities and sharing; try the item-offer slot on page four'],
+['Signals & nearby alignment','crossroads','Audience, expiry, quantity, material/craft/dungeon/role/exploration/quest/camp/rumor paths'],
+['Shared Moments','people','Bilateral fact acceptance, private interpretations and person-owned promises'],
+['Local memory extensions','people','Keepsakes, Old Roads, The Last Time, Introductions, Witnesses and Unfinished Stories enrich their owning chapters'],
+['Bestiary','bestiary','Known foes, defeat/death evidence, progressive spoils and links'],
+['Contextual tooltips','tooltips','Friendly, hostile, creature, rare, boss, item, recipe and landmark subjects; density and safety'],
+['Rivals','rivals','Retrospective first/last clashes, supported results, own past spec and combat restraint'],
+['Chronicle of the Fallen','fallen','Conditional Hardcore memorial and honest inactive state'],
+['Pack','pack','Journey presets, observed versus reminder versus unknown preparation'],
+['Relics','relics','Chosen item biography, provenance, carrying eras and Bestiary separation'],
+['Class, spec and role context','chronicle','Historical eras and truthful context, no build prescription'],
+['Native UI, controller and hybrid','index','Current Tome grammar, semantic focus, Back, responsive pages and reduced motion'],
+['Memory, provenance and retention','records','Typed local records, five evidence labels, privacy and long-term preservation'],
+['Context engine','records','Capability-aware data with unknown inputs left unknown'],
+['Compatibility and diagnostics','records','Build/capability boundary, isolated failure and safe user-initiated status'],
+['Storage, migrations and backup','records','Versioned SavedVariables, read-only future schema, backup and bounded export'],
+['Settings and Help','settings','Five setting categories, local Help and accessible controls'],
+['Brand and community','index','The companion guild site, source link and interest poll outside the addon']
+];
+document.getElementById('coverage').innerHTML=rows.map(([area,id,copy])=>`<tr><td>${area}</td><td><a href="complete-mockups.html?chapter=${id}">Open ${id==='index'?'the Tome':id} →</a></td><td>${copy}</td></tr>`).join('');
+</script></body></html>

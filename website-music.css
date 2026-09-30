@@ -1,0 +1,9 @@
+.site-music{position:relative;z-index:5;background:linear-gradient(90deg,#071827,#102d43 48%,#071827);border-top:1px solid #98713a;border-bottom:1px solid #98713a;box-shadow:inset 0 1px #e2c07035,0 3px 12px #0003;color:#f2dfb4}
+.music-inner{max-width:1440px;min-height:56px;margin:auto;padding:7px 28px;display:flex;align-items:center;gap:12px}
+.music-mark{width:33px;height:33px;display:grid;place-items:center;flex:none;border:2px ridge #a57c3d;border-radius:50%;background:radial-gradient(circle,#204861,#081a29);color:#f0cf7c;font:22px Georgia;box-shadow:inset 0 0 0 2px #071320}
+.music-copy{display:grid;gap:2px;min-width:0;margin-right:auto}.music-copy strong{font:14px Georgia,serif;color:#f0d185;letter-spacing:.3px}.music-copy span{font:10px/1.4 system-ui,sans-serif;color:#c7baa0}
+.music-toggle{width:39px;height:35px;display:grid;place-items:center;border:2px ridge #98713a;background:linear-gradient(#17405a,#092237);color:#f6d785;font:16px Arial;cursor:pointer;box-shadow:inset 0 0 0 1px #071521}
+.music-toggle:hover,.music-toggle:focus-visible{filter:brightness(1.22);outline:2px solid #f6d785;outline-offset:2px}
+.music-pause{display:none;font-weight:700;letter-spacing:-3px;padding-right:3px}.music-toggle[aria-pressed="true"] .music-play{display:none}.music-toggle[aria-pressed="true"] .music-pause{display:block}
+.music-volume{display:flex;align-items:center;gap:8px;font:11px system-ui,sans-serif;color:#d8c9a9}.music-volume input{width:112px;accent-color:#d4ae5e;cursor:pointer}
+@media(max-width:580px){.music-inner{min-height:50px;padding:6px 16px;gap:9px}.music-mark{width:30px;height:30px}.music-copy strong{font-size:12px}.music-copy span{font-size:9px}.music-volume{gap:5px;font-size:10px}.music-volume input{width:72px}.music-toggle{width:35px;height:32px}}

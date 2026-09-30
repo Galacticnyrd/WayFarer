@@ -1,0 +1,16 @@
+.arrival-scene .arrival-toast{overflow:hidden;transform-origin:bottom right}
+.narration-enhanced .arrival-toast{opacity:0;visibility:hidden;transform:translate3d(35px,22px,0) scale(.96);transition:opacity .45s ease,transform .65s cubic-bezier(.2,.8,.2,1),visibility .65s;pointer-events:none}
+.narration-enhanced .arrival-toast.is-visible{opacity:1;visibility:visible;transform:translate3d(0,0,0) scale(1);pointer-events:auto}
+.arrival-toast:before{content:'';position:absolute;inset:-60%;background:linear-gradient(110deg,transparent 42%,#f0d18500 46%,#f0d18526 50%,#9bcfff15 53%,transparent 58%);transform:translateX(-65%) rotate(-8deg);pointer-events:none;opacity:0}
+.arrival-toast.is-visible:before{animation:tome-shimmer 1.7s .35s ease-out both}
+.arrival-toast.is-visible{box-shadow:0 8px 30px #0006,0 0 22px #8dc9ff16,inset 0 0 18px #d5a54d0c}
+@keyframes tome-shimmer{0%{opacity:0;transform:translateX(-65%) rotate(-8deg)}20%{opacity:1}100%{opacity:0;transform:translateX(65%) rotate(-8deg)}}
+.arrival-scene .arrival-toast .toast-kicker{padding-right:76px}
+.toast-audio,.toast-dismiss{position:absolute;top:12px;right:50px;width:34px;height:34px;padding:6px;display:grid;place-items:center;border:1px solid #b08d4655;background:#112e4480;color:#f0d185;border-radius:3px}
+.toast-audio:hover,.toast-dismiss:hover{background:#234967}.toast-dismiss{right:12px;font-size:23px;line-height:1}
+.toast-audio svg{width:20px;height:20px}.toast-audio .stop-glyph{display:none}.toast-audio[aria-pressed=true] .speaker-glyph{display:none}.toast-audio[aria-pressed=true] .stop-glyph{display:block}
+.narration-progress{height:2px;position:absolute;bottom:0;left:0;right:0;background:#f0d18516}
+.narration-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#6badd8,#f0d185);box-shadow:0 0 8px #9bcfff80}
+.narration-controls{max-width:1040px;margin:14px auto 0;display:flex;gap:14px;align-items:center;flex-wrap:wrap}.narration-controls .button{color:#f0d185;font-size:12px;min-width:175px}.narration-feedback{font-size:12px;color:#d8dfeb;flex:1}.narration-volume{display:flex;align-items:center;gap:8px;font-size:11px;color:#e5d7b9}.narration-volume input{width:90px;accent-color:#d7bb77}
+@media(max-width:480px){.arrival-scene .arrival-toast{min-height:242px}.narration-controls{gap:10px}.narration-feedback{flex-basis:100%;order:3}.toast-audio,.toast-dismiss{top:10px}}
+@media(prefers-reduced-motion:reduce){.narration-enhanced .arrival-toast{transform:none;transition:none}.arrival-toast.is-visible:before{animation:none}}
